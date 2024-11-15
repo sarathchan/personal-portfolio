@@ -2,18 +2,24 @@ import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 import { RevealLinks } from "../components/common/RevealLinks";
+import SEO from "../components/SEO";
 
 export const AboutsPage = () => {
   return (
     <>
-    <section className="relative grid min-h-screen w-full place-content-center overflow-hidden bg-[#fff]]">
-      <h2 className="relative z-0 text-[20vw] font-black text-neutral-800 md:text-[200px]">
-        DURGESH<span className="text-orange-500">.</span>
-      </h2>
-      <Cards />
-     
-    </section>
-    <RevealLinks />
+      <SEO
+        title="About Us"
+        description="Welcome to my portfolio website. I'm a Full Stack Developer specializing in modern web technologies."
+        path="/about"
+      />
+      <section className="relative grid min-h-screen w-full place-content-center overflow-hidden bg-[#fff]]">
+        <h2 className="relative z-0 text-[20vw] font-black text-neutral-800 md:text-[200px]">
+          DURGESH<span className="text-orange-500">.</span>
+        </h2>
+        <Cards />
+
+      </section>
+      <RevealLinks />
     </>
   );
 };

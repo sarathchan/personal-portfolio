@@ -9,6 +9,7 @@ import { ArrowUpRightIcon } from 'lucide-react'
 import { throttle } from '../lib/utils'
 import { Card, CardContent, CardFooter } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import SEO from '../components/SEO'
 
 function useElementViewportPosition(ref) {
   const [position, setPosition] = useState([0, 0])
@@ -62,6 +63,13 @@ export default function BlogPage() {
   }, [])
 
   return (
+    
+    <>
+    <SEO
+        title="Blogs"
+        description="Welcome to my portfolio website. I'm a Full Stack Developer specializing in modern web technologies."
+        path="/blogs"
+      />
     <div className="min-h-screen bg-background">
       <section className="relative grid min-h-screen w-full place-content-center overflow-hidden bg-background">
         <motion.h1
@@ -105,5 +113,6 @@ export default function BlogPage() {
 
       <RevealLinks />
     </div>
+    </>
   )
 }

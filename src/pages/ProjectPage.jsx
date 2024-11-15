@@ -13,6 +13,7 @@ import sinssflow from '../assets/project-images/sinssflow.png'
 import kyte from '../assets/project-images/kyteenergy.png'
 import { projects } from '../lib/projects';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 function useElementViewportPosition(ref) {
   const [position, setPosition] = useState([0, 0]);
   useEffect(() => {
@@ -69,6 +70,11 @@ export default function index() {
   }, []);
   return (
     <>
+    <SEO
+        title="Projects"
+        description="Welcome to my portfolio website. I'm a Full Stack Developer specializing in modern web technologies."
+        path="/projects"
+      />
       <section className="relative grid min-h-screen w-full place-content-center overflow-hidden bg-[#fff]]">
         <h2 className="relative z-0 text-[20vw] font-black text-neutral-800 md:text-[200px]">
           PROJECTS<span className="text-orange-500">.</span>

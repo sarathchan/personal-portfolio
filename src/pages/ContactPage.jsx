@@ -6,9 +6,16 @@ import shakehand from '../assets/images/shakehands.svg'
 import { Link } from "react-router-dom";
 import { Mail } from "lucide-react";
 import { ReactLenis } from 'lenis/react';
+import SEO from "../components/SEO";
 
 export const ContactPage = () => {
   return (
+    <>
+    <SEO
+        title="Contact"
+        description="Welcome to my portfolio website. I'm a Full Stack Developer specializing in modern web technologies."
+        path="/contact"
+      />
     <ReactLenis root>
       <section className={twMerge(
         "sticky top-0 grid min-h-screen w-full place-content-center overflow-hidden bg-[#f5f5f5]",
@@ -56,5 +63,6 @@ export const ContactPage = () => {
       <RevealLinks />
       </section>
     </ReactLenis>
+    </>
   );
 };
