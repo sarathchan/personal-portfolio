@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import { Button } from "@/components/ui/button"
-import { Asterisk, Search, Menu, X } from 'lucide-react'
+import { Asterisk, Search, Menu, X, Github } from 'lucide-react'
 import {
   Sheet,
   SheetContent,
@@ -67,7 +67,7 @@ export default function Navbar() {
           </div>
           <div className="flex items-center">
             <Button variant="ghost" size="icon" className="mr-2">
-              <Search className="h-5 w-5" />
+              <Github className="h-5 w-5" />
             </Button>
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
@@ -82,14 +82,14 @@ export default function Navbar() {
                 <SheetHeader className="border-b pb-4">
                   <SheetTitle className="text-left">Navigation</SheetTitle>
                   <SheetClose className="absolute right-4 top-4">
-                    <X className="h-4 w-4" />
+                   
                   </SheetClose>
                 </SheetHeader>
                 <nav className="flex flex-col space-y-4 mt-8">
                   {navLinks.map((item) => (
                     <Link
                       key={item.name}
-                      href={item.href}
+                      to={item.href}
                       onClick={() => {
                         setIsOpen(false)
                         playClickSound()
