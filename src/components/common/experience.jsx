@@ -11,18 +11,19 @@ const experiences = [
     company: "Sinss Digital Marketing Studio",
     description: "Currently working as a full-stack developer at Sinss Digital Marketing Studio since March 2023. Developed e-commerce, CRM, and project management applications using the MERN stack, Next.js, PostgreSQL, and MySQL. Designed and developed over 8 websites as the sole developer.",
     icon: starIcon,
-    technologies: ["Mern", "PostgreSQL", "MySQL"],
+    technologies: ["MERN", "PostgreSQL", "MySQL"],
     duration: "March 2023 - Present"
   },
   {
     title: "React Developer Intern",
     company: "Sinss Digital Marketing Studio",
-    description: "Worked as a React.js developer intern at Sinss Digital Marketing Studio for 3 months from December 2023 to March 2024. Contributed to a Develop a Website built on React Js",
+    description: "Worked as a React.js developer intern at Sinss Digital Marketing Studio for 3 months from December 2023 to March 2024. Contributed to the development of a website built with React.js.",
     icon: reactIcon,
     technologies: ["React.js"],
     duration: "December 2023 - March 2024"
   }
 ]
+
 
 export default function Experience() {
   return (
