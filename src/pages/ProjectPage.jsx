@@ -75,7 +75,7 @@ export default function index() {
         path="/projects"
       />
       <section className="relative grid min-h-screen w-full place-content-center overflow-hidden ">
-        <h2 className="relative z-0 text-[20vw] font-black text-neutral-800 md:text-[200px]">
+        <h2 className="relative z-0 text-[14vw] font-black text-neutral-800 md:text-[200px]">
           PROJECTS<span className="text-orange-500">.</span>
         </h2>
       </section>

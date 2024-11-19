@@ -136,7 +136,7 @@ export default function Skills() {
                                    <p className="text-4xl font-bold text-green-300">🎉 SUPERPOWER 🎉</p>
                                    <p className="text-sm font-bold text-[#bababb]">which I have</p>
                               </motion.div>
-                              <motion.h1 variants={headerVariants} className="text-3xl md:text-4xl lg:text-5xl font-medium leading-tight tracking-tight lg:leading-[1.2]  text-white text-center">
+                              <motion.h1 variants={headerVariants} className="text-2xl md:text-3xl lg:text-4xl font-medium leading-tight tracking-tight lg:leading-[1.2]  text-white text-center">
                                    Turning ideas into functional, user-friendly web experiences with a blend of logic, creativity, and innovation
                               </motion.h1>
                          </div>

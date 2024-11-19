@@ -76,7 +76,7 @@ export default function BlogPage() {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="relative z-0 text-[20vw] font-black text-foreground md:text-[200px] text-center"
+          className="relative z-0 text-[14vw] font-black text-foreground md:text-[200px] text-center"
         >
           BLOGS<span className="text-green-300">.</span>
         </motion.h1>

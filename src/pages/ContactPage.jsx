@@ -21,7 +21,7 @@ export const ContactPage = () => {
         "sticky top-0 grid min-h-screen w-full place-content-center overflow-hidden bg-[#f5f5f5]",
         "lenis-section"
       )}>
-        <h2 className="relative z-0 text-[20vw] font-black text-[#333] md:text-[200px]">
+        <h2 className="relative z-0 text-[14vw] font-black text-[#333] md:text-[200px]">
           Contact<span className="text-[#ff6b6b]">.</span>
         </h2>
       </section>

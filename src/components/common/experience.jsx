@@ -11,7 +11,7 @@ const experiences = [
     company: "Sinss Digital Marketing Studio",
     description: "Currently working as a full-stack developer at Sinss Digital Marketing Studio since March 2023. Developed e-commerce, CRM, and project management applications using the MERN stack, Next.js, PostgreSQL, and MySQL. Designed and developed over 8 websites as the sole developer.",
     icon: starIcon,
-    technologies: ["React", "Next.js", "Node.js", "Express", "PostgreSQL", "MySQL"],
+    technologies: ["Mern", "PostgreSQL", "MySQL"],
     duration: "March 2023 - Present"
   },
   {
@@ -28,7 +28,7 @@ export default function Experience() {
   return (
     <section className="min-h-screen bg-[#F2F2F4] py-24 px-4 sm:px-6 lg:px-8 rounded-t-[80px]">
       <div className="max-w-6xl mx-auto">
-        <motion.h2 
+        <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -39,7 +39,7 @@ export default function Experience() {
 
         <div className="">
           {experiences.map((experience, index) => (
-            <motion.div 
+            <motion.div
               key={index}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
