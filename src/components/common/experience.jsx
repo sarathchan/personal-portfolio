@@ -16,10 +16,10 @@ const experiences = [
   },
   {
     title: "React Developer Intern",
-    company: "Nectarglob Technologies",
-    description: "Worked as a React.js developer intern at Nectarglob Technologies for 3 months from December 2023 to March 2024. Contributed to a CRM application built on SharePoint, primarily in a support role.",
+    company: "Sinss Digital Marketing Studio",
+    description: "Worked as a React.js developer intern at Sinss Digital Marketing Studio for 3 months from December 2023 to March 2024. Contributed to a Develop a Website built on React Js",
     icon: reactIcon,
-    technologies: ["React.js", "SharePoint"],
+    technologies: ["React.js"],
     duration: "December 2023 - March 2024"
   }
 ]
