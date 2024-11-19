@@ -1,3 +1,14 @@
+import essentialharvest from '../assets/projects/mockups/eh1.png'
+import sinssflow from '../assets/projects/mockups/sf.png'
+import kyte from '../assets/projects/mockups/kyte1.png'
+import ljs from '../assets/projects/mockups/ljs1.png'
+import fi1 from '../assets/projects/mockups/fi1.png'
+import qualityDigital from '../assets/projects/mockups/qd1.png'
+import sp from '../assets/projects/mockups/sp.png'
+import vk from '../assets/projects/mockups/vk.png'
+import cp from '../assets/projects/mockups/cp.png'
+
+
 export const projects = [
      {
           "name": "Ecommerce Application",
@@ -14,7 +25,7 @@ export const projects = [
           ],
           "techStack": ["MERN (MongoDB, Express, React.js, Node.js)", "Nodemailer", "Google APIs", "Razorpay"],
           "liveLink": "essentialharvest.in",
-          "image": "https://placehold.co/600x400"
+          "image": essentialharvest,
 
      },
      {
@@ -41,7 +52,7 @@ export const projects = [
                "React Query (Tanstack)"
           ],
           "liveLink": "#",
-          "image": "https://placehold.co/600x400"
+          "image": sinssflow,
      },
      {
           "name": "Kyte Energy Website",
@@ -55,7 +66,7 @@ export const projects = [
           ],
           "techStack": ["Figma", "React.js", "Framer Motion"],
           "liveLink": "kyteenergy.com",
-          "image": "https://placehold.co/600x400"
+          "image": kyte
      },
      {
           "name": "LumberJack Studio Website",
@@ -69,7 +80,7 @@ export const projects = [
           ],
           "techStack": ["Figma", "React.js", "Framer Motion"],
           "liveLink": "lumberjackstudio.in",
-          "image": "https://placehold.co/600x400"
+          "image": ljs
      },
      {
           "name": "Forcon Infra Website",
@@ -83,7 +94,7 @@ export const projects = [
           ],
           "techStack": ["Figma", "React.js", "Framer Motion"],
           "liveLink": "forconinfra.com",
-          "image": "https://placehold.co/600x400"
+          "image": fi1
      },
      {
           "name": "Quality Digital Color Lab Website",
@@ -97,7 +108,7 @@ export const projects = [
           ],
           "techStack": ["Figma", "React.js", "Framer Motion"],
           "liveLink": "qualitydigitalcolorlab.com",
-          "image": "https://placehold.co/600x400"
+          "image": qualityDigital
      },
      {
           "name": "Shivam Pawar Portfolio Website",
@@ -111,7 +122,7 @@ export const projects = [
           ],
           "techStack": ["Figma", "React.js", "Framer Motion"],
           "liveLink": "shivampawar.vercel.app",
-          "image": "https://placehold.co/600x400"
+          "image": sp
      },
      {
           "name": "VK Food Website",
@@ -125,7 +136,7 @@ export const projects = [
           ],
           "techStack": ["Figma", "React.js", "Framer Motion"],
           "liveLink": "vkfood.in",
-          "image": "https://placehold.co/600x400"
+          "image": vk
      },
      {
           "projectTitle": "Climate App",
@@ -139,7 +150,7 @@ export const projects = [
           ],
           "techStack": ["Figma", "React.js", "Framer Motion", "Shadcn UI", "Tanstack"],
           "liveLink": "climate-production.vercel.app/",
-          "image": "https://placehold.co/600x400"
+          "image": cp
      }
 
 ]

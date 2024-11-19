@@ -21,7 +21,7 @@ const navLinks = [
   { id: "06", name: "Contact", href: "/contact" },
 ]
 
-export default function Navbar() {
+export default function Navbar({ activeSection }) {
   const [isScrolled, setIsScrolled] = React.useState(false)
   const [isOpen, setIsOpen] = React.useState(false)
 
@@ -38,6 +38,9 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  console.log('Active Section:', activeSection);
+
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 
@@ -46,16 +49,24 @@ export default function Navbar() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between py-4 rounded-lg">
           <div className="flex items-center">
-            <div className="flex-shrink-0 bg-[#db4848] rounded-full">
-              <Asterisk size={40} className="text-secondary" />
-            </div>
+            <Link to={'/'}>
+              <div className="flex-shrink-0 bg-green-500 rounded-full">
+                <Asterisk size={40} className="text-secondary" />
+              </div>
+            </Link>
+
             <div className="hidden md:block ml-10">
               <div className="flex items-baseline space-x-4">
                 {navLinks.map((item) => (
                   <Link key={item.name} to={item.href}>
                     <Button
                       variant="ghost"
-                      className="text-sm text-slate-900 font-medium"
+                      className={`text-sm transition-all duration-300 font-medium ${activeSection === "aboutus" ? "text-gray-900" :
+                          activeSection === "projects" ? "text-green-500" :
+                            activeSection === "skills" ? "text-white" :
+                                "text-gray-900"
+                        }`}
+
                       onClick={playClickSound}
                     >
                       {item.name}
@@ -66,9 +77,12 @@ export default function Navbar() {
             </div>
           </div>
           <div className="flex items-center">
-            <Button variant="ghost" size="icon" className="mr-2">
-              <Github className="h-5 w-5" />
-            </Button>
+            <Link to={'https://github.com/durgeshbachhav'} >
+              <Button variant="ghost" size="icon" className="mr-2 bg-green-400">
+                <Github className="h-5 w-5" />
+              </Button>
+            </Link>
+
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon" className="md:hidden">
@@ -77,13 +91,10 @@ export default function Navbar() {
               </SheetTrigger>
               <SheetContent
                 side="right"
-                className="w-full sm:w-[300px] bg-white/80 backdrop-blur-lg"
+                className="w-full sm:w-[300px] bg-green-300 backdrop-blur-lg"
               >
-                <SheetHeader className="border-b pb-4">
+                <SheetHeader className="border-b border-green-900 pb-4">
                   <SheetTitle className="text-left">Navigation</SheetTitle>
-                  <SheetClose className="absolute right-4 top-4">
-                   
-                  </SheetClose>
                 </SheetHeader>
                 <nav className="flex flex-col space-y-4 mt-8">
                   {navLinks.map((item) => (
@@ -95,9 +106,9 @@ export default function Navbar() {
                         playClickSound()
                       }}
                     >
-                      <div className="flex items-center space-x-4 px-2 py-2 hover:bg-gray-100 rounded-md transition-colors">
-                        <span className="text-sm text-gray-400">{item.id}</span>
-                        <span className="text-base">{item.name}</span>
+                      <div className="flex items-center space-x-4 px-2 py-2 hover:bg-white active:bg-white rounded-md transition-colors border-b border-slate-900">
+                        <span className="text-sm text-gray-800">{item.id}</span>
+                        <span className="text-base font-bold">{item.name}</span>
                       </div>
                     </Link>
                   ))}

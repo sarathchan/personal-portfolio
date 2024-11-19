@@ -22,7 +22,9 @@ export default {
 				'infinite-scroll': 'infinite-scroll 25s linear infinite',
 				'meteor': "meteor 5s linear infinite",
 				'shimmer': "shimmer 8s infinite",
+				'logo-cloud': 'logo-cloud 30s linear infinite',
 			},
+			
 			keyframes: {
 				'infinite-scroll': {
 					from: { transform: 'translateX(0)' },
@@ -44,7 +46,12 @@ export default {
 						"background-position": "calc(100% + var(--shimmer-width)) 0",
 					},
 				},
+				'logo-cloud': {
+				       from: { transform: 'translateX(0)' },
+				       to: { transform: 'translateX(calc(-100% - 4rem))' },
+				     },
 			},
+			
 			colors: {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',

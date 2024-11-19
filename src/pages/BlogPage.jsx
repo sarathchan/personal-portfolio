@@ -78,7 +78,7 @@ export default function BlogPage() {
           transition={{ duration: 1 }}
           className="relative z-0 text-[20vw] font-black text-foreground md:text-[200px] text-center"
         >
-          BLOGS<span className="text-primary">.</span>
+          BLOGS<span className="text-green-300">.</span>
         </motion.h1>
       </section>
 
@@ -90,10 +90,10 @@ export default function BlogPage() {
                 <motion.div
                   {...slideAnimation}
                   key={index}
-                  className="group relative h-[400px] w-[300px] md:w-[350px] hover:border-2"
+                  className="group relative h-[400px] w-[300px] md:w-[350px] "
                 >
                   <img
-                    className="h-full w-full object-cover rounded-3xl transition-transform group-hover:scale-105"
+                    className="h-full w-full object-cover rounded-3xl transition-transform "
                     src={blog?.image}
                     alt={blog.title}
                   />
@@ -101,7 +101,7 @@ export default function BlogPage() {
 
                     <Link to={blog.slug}>
                       <h2 className="text-xl font-semibold line-clamp-2 mb-2">{blog.title}</h2>
-                      <div className='flex hover:border-2 p-4 absolute bottom-3 bg:border-orange-300 text-white'><p>Read More</p> <ArrowUpRightIcon /></div>
+                      <div className='flex hover:border-2 p-4 absolute bottom-3 bg-green-200 rounded-2xl border-green-300 text-gray-900'><p>Read More</p> <ArrowUpRightIcon /></div>
                     </Link>
                   </div>
                 </motion.div>

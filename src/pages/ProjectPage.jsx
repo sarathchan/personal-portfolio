@@ -8,12 +8,11 @@ import {
 import { useEffect, useRef, useState } from 'react';
 import { throttle } from '../lib/utils';
 import { RevealLinks } from '../components/common/RevealLinks';
-import essentialharvest from '../assets/project-images/essential-harvest.png'
-import sinssflow from '../assets/project-images/sinssflow.png'
-import kyte from '../assets/project-images/kyteenergy.png'
+
 import { projects } from '../lib/projects';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
+import { MoveUpRight } from 'lucide-react';
 function useElementViewportPosition(ref) {
   const [position, setPosition] = useState([0, 0]);
   useEffect(() => {
@@ -27,8 +26,8 @@ function useElementViewportPosition(ref) {
 }
 const slideAnimation = {
   variants: {
-    full: { backgroundColor: '#008299' },
-    partial: { backgroundColor: '#ffffff' },
+    full: { backgroundColor: '#fff' },
+    partial: { backgroundColor: '#fff' },
   },
   initial: 'partial',
   whileInView: 'full',
@@ -70,12 +69,12 @@ export default function index() {
   }, []);
   return (
     <>
-    <SEO
+      <SEO
         title="Projects"
         description="Welcome to my portfolio website. I'm a Full Stack Developer specializing in modern web technologies."
         path="/projects"
       />
-      <section className="relative grid min-h-screen w-full place-content-center overflow-hidden bg-[#fff]]">
+      <section className="relative grid min-h-screen w-full place-content-center overflow-hidden ">
         <h2 className="relative z-0 text-[20vw] font-black text-neutral-800 md:text-[200px]">
           PROJECTS<span className="text-orange-500">.</span>
         </h2>
@@ -93,10 +92,14 @@ export default function index() {
                   <Link to={item.slug}>
                     <motion.img
                       key={item.id}
-                      className="w-full flex-shrink-0 h-full object-cover"
+                      className="w-full flex-shrink-0 h-full object-cover rounded-3xl"
                       src={item?.image}
                       alt={'img'}
                     />
+                    <div className='absolute top-4 right-4 bg-green-200 p-2 rounded-3xl'>
+                    <MoveUpRight />
+                    </div>
+                    
                   </Link>
                 </motion.div>
               ))}

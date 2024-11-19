@@ -7,6 +7,7 @@ import { motion, useScroll, useTransform } from 'framer-motion'
 import blogData from '../lib/blogData.json'
 import MaskImage from '../components/MaskImage'
 import { RevealLinks } from '../components/common/RevealLinks'
+import SEO from '../components/SEO'
 
 export default function BlogDetails() {
   const { slug } = useParams()
@@ -15,8 +16,8 @@ export default function BlogDetails() {
   const [prevBlog, setPrevBlog] = useState(null)
 
   const { scrollYProgress } = useScroll()
-  const opacity = useTransform(scrollYProgress, [0, 0.2], [1, 0])
-  const scale = useTransform(scrollYProgress, [0, 0.2], [1, 0.95])
+  const opacity = useTransform(scrollYProgress, [0.1, 0.2], [1, 0])
+  const scale = useTransform(scrollYProgress, [0.1, 0.2], [1, 0.95])
 
   useEffect(() => {
     const currentBlogIndex = blogData?.blogs?.findIndex(blog => blog.slug === slug)
@@ -30,6 +31,12 @@ export default function BlogDetails() {
   if (!blog) return null
 
   return (
+    <>
+     <SEO
+        title={blog.metaTitle}
+        description={blog.metaDescription}
+        path={`/blogs/${blog.slug}`}
+      />
     <div className="relative bg-gradient-to-b from-orange-50 to-white min-h-screen">
       <motion.section
         style={{ opacity, scale }}
@@ -52,7 +59,7 @@ export default function BlogDetails() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
         >
-          <div className="rounded-2xl p-6 md:p-8 bg-white shadow-lg">
+          <div className="rounded-2xl p-6 md:p-8 ">
             <p className="text-lg md:text-xl leading-relaxed text-neutral-700">{blog.content}</p>
           </div>
         </motion.div>
@@ -63,7 +70,7 @@ export default function BlogDetails() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="order-1 lg:order-2"
         >
-          <div className="rounded-2xl p-6 md:p-8 bg-white shadow-lg">
+          <div className="rounded-2xl p-6 md:p-8 ">
             <div className="grid grid-cols-2 gap-6 md:gap-8">
               <div>
                 <p className="mb-2 text-orange-400 font-medium">TOPIC NAME</p>
@@ -111,7 +118,7 @@ export default function BlogDetails() {
             className="flex w-full sm:w-auto items-center justify-center sm:justify-start px-6 py-3 bg-orange-100 hover:bg-orange-200 rounded-full text-orange-600 hover:text-orange-700 transition-colors duration-300 ease-in-out"
           >
             <ChevronLeft className="w-5 h-5 mr-2 flex-shrink-0" />
-            <span className="truncate">Previous: {prevBlog.title}</span>
+            <span className="truncate">Previous</span>
           </Link>
         )}
         {nextBlog && (
@@ -119,7 +126,7 @@ export default function BlogDetails() {
             to={`/blogs/${nextBlog.slug}`}
             className="flex w-full sm:w-auto items-center justify-center sm:justify-end px-6 py-3 bg-orange-100 hover:bg-orange-200 rounded-full text-orange-600 hover:text-orange-700 transition-colors duration-300 ease-in-out"
           >
-            <span className="truncate">Next: {nextBlog.title}</span>
+            <span className="truncate">Next</span>
             <ChevronRight className="w-5 h-5 ml-2 flex-shrink-0" />
           </Link>
         )}
@@ -127,5 +134,7 @@ export default function BlogDetails() {
 
       <RevealLinks />
     </div>
+    </>
+    
   )
 }

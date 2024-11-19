@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom'
 import { projects } from '../lib/projects'
 import { AnimatePresence, motion, useInView } from 'framer-motion'
 import FuzzyOverlay from '../components/FuzzyOverlay'
+import SEO from '../components/SEO'
 
 const ProjectDetails = () => {
   const { slug } = useParams()
@@ -21,6 +22,12 @@ const ProjectDetails = () => {
   const imageInView = useInView(imageRef, { once: true })
 
   return (
+    <>
+    <SEO
+        title={project.name}
+        description={project.name}
+        path={`/projects/${project.slug}`}
+      />
     <div className="bg-gray-50">
       <div className="relative overflow-hidden rounded-b-[80px]">
         <section className="relative grid h-[70vh] w-full place-content-center overflow-hidden bg-[#fff]">
@@ -78,9 +85,9 @@ const ProjectDetails = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold">TECHNOLOGY</h4>
-                  <ul>
+                  <ul className='flex flex-wrap gap-2'>
                     {project.techStack.map((tech, index) => (
-                      <li key={index}>{tech}</li>
+                      <li className='bg-green-200 p-1 rounded-lg px-2 ' key={index}>{tech}</li>
                     ))}
                   </ul>
                 </div>
@@ -150,6 +157,7 @@ const ProjectDetails = () => {
         </motion.div>
       </div>
     </div>
+    </>
   )
 }
 

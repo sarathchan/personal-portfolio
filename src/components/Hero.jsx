@@ -51,7 +51,7 @@ export default function Hero() {
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.2 }}
-                  className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium"
+                  className="inline-block px-4 py-1.5 rounded-full bg-green-300/50 text-primary text-sm font-medium"
                 >
                   🎉 | Available for freelance work
                 </motion.div>
@@ -63,7 +63,7 @@ export default function Hero() {
                   transition={{ delay: 0.3 }}
                   className="text-4xl font-bold  text-primary sm:text-5xl lg:text-6xl "
                 >
-                  Hi, I&apos;m Durgesh Bachhav
+                  Hi, I&apos;m Durgesh Bachhav<span className="text-green-300">.</span>
                 </motion.h1>
 
                 <motion.div
@@ -73,7 +73,10 @@ export default function Hero() {
                   className="text-2xl sm:text-3xl lg:text-4xl text-black font-medium"
                 >
                   I build{' '}
-                  <FlipWords words={words} />{' '}
+              <FlipWords
+                className="bg-gradient-to-r from-green-500 to-green-400 text-white px-4 py-2 rounded-xl shadow-lg"
+                words={words}
+              />{' '}
                   <span className="block sm:inline text-black">websites and apps</span>
                 </motion.div>
 

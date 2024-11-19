@@ -8,16 +8,26 @@ import { AboutsPage } from "./pages/AboutPage";
 import { ContactPage } from "./pages/ContactPage";
 import ProjectDetails from "./pages/ProjectDetails";
 import BlogDetails from "./pages/BlogDetails";
+import { ResumeActions } from "./components/common/ResumeActions";
+import { useEffect, useState } from "react";
 
 export default function App() {
 
-  const locomotiveScroll = new LocomotiveScroll();
+  useEffect(() => {
+    const scroll = new LocomotiveScroll({
+      el: document.querySelector("[data-scroll-container]"),
+      smooth: true,
+    });
 
+    return () => scroll.destroy(); 
+  }, []);
+  const [activeSection, setActiveSection] = useState('');
+  console.log('')
   return (
     <>
-      <Navbar />
+      <Navbar activeSection={activeSection} />
       <Routes>
-        <Route path="*" element={<HomePage />} />
+        <Route path="/" element={<HomePage setActiveSection={setActiveSection} />} />
         <Route path="/projects" element={<ProjectPage />} />
         <Route path="/projects/:slug" element={<ProjectDetails />} />
         <Route path="/blogs" element={<BlogPage />} />
@@ -25,6 +35,7 @@ export default function App() {
         <Route path="/about" element={<AboutsPage />} />
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
+      <ResumeActions />
     </>
   )
 }
