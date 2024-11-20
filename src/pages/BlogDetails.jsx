@@ -111,7 +111,7 @@ export default function BlogDetails() {
         </motion.div>
       </div>
 
-      <div className="max-w-6xl mx-auto px-4 py-8 md:py-12 flex flex-col sm:flex-row justify-between items-center gap-4">
+      <div className="max-w-6xl mx-auto px-4 py-8 md:py-12 flex  sm:flex-row justify-between items-center gap-4">
         {prevBlog && (
           <Link
             to={`/blogs/${prevBlog.slug}`}

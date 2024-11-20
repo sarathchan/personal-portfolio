@@ -62,9 +62,9 @@ export default function Navbar({ activeSection }) {
                     <Button
                       variant="ghost"
                       className={`text-sm transition-all duration-300 font-medium ${activeSection === "aboutus" ? "text-gray-900" :
-                          activeSection === "projects" ? "text-green-500" :
-                            activeSection === "skills" ? "text-white" :
-                                "text-gray-900"
+                        activeSection === "projects" ? "text-green-500" :
+                          activeSection === "skills" ? "text-white" :
+                            "text-gray-900"
                         }`}
 
                       onClick={playClickSound}
@@ -85,7 +85,11 @@ export default function Navbar({ activeSection }) {
 
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
-                <Button variant="ghost" size="icon" className="md:hidden">
+                <Button variant="ghost" size="icon" className={`md:hidden ${activeSection === "aboutus" ? "text-gray-900" :
+                  activeSection === "projects" ? "bg-green-500" :
+                    activeSection === "skills" ? "bg-white" :
+                      "bg-green-300"
+                  }`} >
                   <Menu className="h-5 w-5" />
                 </Button>
               </SheetTrigger>

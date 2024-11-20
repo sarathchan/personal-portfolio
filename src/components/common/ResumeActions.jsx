@@ -1,12 +1,10 @@
 "use client"
 
-import { useMemo, useState } from "react"
+import { useMemo, useState, useRef, useEffect } from "react"
 import { AnimatePresence, MotionConfig, motion } from "framer-motion"
 import useMeasure from "react-use-measure"
-import { Download, Headphones } from "lucide-react"
+import { Download, Headphones, Pause } from "lucide-react"
 import FamilyButton from "../ui/FamilyButton"
-
-
 
 export function ResumeActions() {
      return (
@@ -27,51 +25,99 @@ export function ResumeActionsToggle() {
      const [activeTab, setActiveTab] = useState(0)
      const [direction, setDirection] = useState(0)
      const [isAnimating, setIsAnimating] = useState(false)
+     const [isPlaying, setIsPlaying] = useState(false)
      const [ref, bounds] = useMeasure()
+     const audioRef = useRef(null)
 
      // Function to play click sound
      const playClickSound = () => {
-          const audio = new Audio('/src/assets/sfx/click.wav');
-          audio.play();
+          const audio = new Audio('/src/assets/sfx/click.wav')
+          audio.play()
+     }
+
+     // Function to handle PDF download
+     const handleDownload = () => {
+          // Replace '/path/to/your/resume.pdf' with the actual path to your PDF file
+          const pdfUrl = '/src/assets/db/resume.pdf'
+          
+          // Create a temporary link element
+          const link = document.createElement('a')
+          link.href = pdfUrl
+          link.download = 'durgesh-bachhav-resume.pdf'
+          document.body.appendChild(link)
+          link.click()
+          document.body.removeChild(link)
+     }
+
+     // Function to handle audio playback
+     const handleAudioPlayback = () => {
+          if (!audioRef.current) {
+               audioRef.current = new Audio('/src/assets/db/resume.mp3')
+               audioRef.current.addEventListener('ended', () => {
+                    setIsPlaying(false)
+               })
+          }
+
+          if (isPlaying) {
+               audioRef.current.pause()
+          } else {
+               audioRef.current.play()
+          }
+          setIsPlaying(!isPlaying)
      }
 
      const content = useMemo(() => {
           switch (activeTab) {
                case 0:
                     return (
-                         <div className="flex items-center justify-center">
+                         <button 
+                              onClick={handleDownload}
+                              className="flex items-center justify-center p-2 rounded-full hover:bg-neutral-600 transition-colors"
+                              aria-label="Download Resume"
+                         >
                               <Download size={32} className="text-white" />
-                         </div>
+                         </button>
                     )
                case 1:
                     return (
-                         <div className="flex items-center justify-center">
-                              <Headphones size={32} className="text-white" />
-                         </div>
+                         <button 
+                              onClick={handleAudioPlayback}
+                              className="flex items-center justify-center p-2 rounded-full hover:bg-neutral-600 transition-colors"
+                              aria-label={isPlaying ? "Pause Audio" : "Play Audio"}
+                         >
+                              {isPlaying ? (
+                                   <Pause size={32} className="text-white" />
+                              ) : (
+                                   <Headphones size={32} className="text-white" />
+                              )}
+                         </button>
                     )
                default:
                     return null
           }
-     }, [activeTab])
+     }, [activeTab, isPlaying])
 
+     // Handle tab switching only
      const handleTabClick = (newTabId) => {
           if (newTabId !== activeTab && !isAnimating) {
                const newDirection = newTabId > activeTab ? 1 : -1
                setDirection(newDirection)
                setActiveTab(newTabId)
-               playClickSound();
-               // Handle the action based on the tab
-               if (newTabId === 0) {
-                    // Trigger resume download
-                    console.log("Downloading resume...")
-                    // Add your download logic here
-               } else {
-                    // Trigger resume listen
-                    console.log("Starting resume text-to-speech...")
-                    // Add your text-to-speech logic here
-               }
+               playClickSound()
           }
      }
+
+     // Cleanup audio on component unmount
+     useEffect(() => {
+          return () => {
+               if (audioRef.current) {
+                    audioRef.current.pause()
+                    audioRef.current.removeEventListener('ended', () => {
+                         setIsPlaying(false)
+                    })
+               }
+          }
+     }, [])
 
      const variants = {
           initial: (direction) => ({
@@ -135,6 +181,7 @@ export function ResumeActionsToggle() {
                                         custom={direction}
                                         onAnimationStart={() => setIsAnimating(true)}
                                         onAnimationComplete={() => setIsAnimating(false)}
+                                        className="flex items-center justify-center"
                                    >
                                         {content}
                                    </motion.div>

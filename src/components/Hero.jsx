@@ -73,10 +73,10 @@ export default function Hero() {
                   className="text-2xl sm:text-3xl lg:text-4xl text-black font-medium"
                 >
                   I build{' '}
-              <FlipWords
-                className="bg-gradient-to-r from-green-500 to-green-400 text-white px-4 py-2 rounded-xl shadow-lg"
-                words={words}
-              />{' '}
+                  <FlipWords
+                    className="bg-gradient-to-r from-green-500 to-green-400 text-white px-4 py-2 rounded-xl shadow-lg"
+                    words={words}
+                  />{' '}
                   <span className="block sm:inline text-black">websites and apps</span>
                 </motion.div>
 

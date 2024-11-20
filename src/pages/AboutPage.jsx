@@ -55,7 +55,7 @@ export const AboutsPage = () => {
             viewport={{ amount: 0.3, margin: '0px 0px 0px 0px' }}
             className="flex flex-col items-start"
           >
-            <div className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-gray-900">
+            <div className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-gray-900 p-8">
               I&apos;m Durgesh,{' '}
               <FlipWords
                 className="bg-gradient-to-r from-green-600 to-green-400 text-white px-4 py-2 rounded-xl shadow-lg"

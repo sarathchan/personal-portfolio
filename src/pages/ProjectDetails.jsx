@@ -35,7 +35,7 @@ const ProjectDetails = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="relative z-0 text-[10vw] font-black text-neutral-800 md:text-[60px]"
+            className="relative text-center z-0 text-[10vw] font-black text-neutral-800 md:text-[60px]"
           >
             {project.name}<span className="text-orange-500">.</span>
           </motion.h2>
