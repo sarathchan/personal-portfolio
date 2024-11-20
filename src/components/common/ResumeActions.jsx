@@ -38,8 +38,8 @@ export function ResumeActionsToggle() {
      // Function to handle PDF download
      const handleDownload = () => {
           // Replace '/path/to/your/resume.pdf' with the actual path to your PDF file
-          const pdfUrl = '/src/assets/db/resume.pdf'
-          
+          const pdfUrl = '/public/db/resume.pdf'
+
           // Create a temporary link element
           const link = document.createElement('a')
           link.href = pdfUrl
@@ -52,7 +52,7 @@ export function ResumeActionsToggle() {
      // Function to handle audio playback
      const handleAudioPlayback = () => {
           if (!audioRef.current) {
-               audioRef.current = new Audio('/src/assets/db/resume.mp3')
+               audioRef.current = new Audio('/public/db/resume.mp3')
                audioRef.current.addEventListener('ended', () => {
                     setIsPlaying(false)
                })
@@ -70,7 +70,7 @@ export function ResumeActionsToggle() {
           switch (activeTab) {
                case 0:
                     return (
-                         <button 
+                         <button
                               onClick={handleDownload}
                               className="flex items-center justify-center p-2 rounded-full hover:bg-neutral-600 transition-colors"
                               aria-label="Download Resume"
@@ -80,7 +80,7 @@ export function ResumeActionsToggle() {
                     )
                case 1:
                     return (
-                         <button 
+                         <button
                               onClick={handleAudioPlayback}
                               className="flex items-center justify-center p-2 rounded-full hover:bg-neutral-600 transition-colors"
                               aria-label={isPlaying ? "Pause Audio" : "Play Audio"}
