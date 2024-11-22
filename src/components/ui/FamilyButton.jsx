@@ -12,8 +12,8 @@ const CONTAINER_SIZE = 200
 
 const FamilyButton = ({ children }) => {
      const [isExpanded, setIsExpanded] = useState(false)
-       // Function to play click sound
-       const playClickSound = () => {
+     // Function to play click sound
+     const playClickSound = () => {
           const audio = new Audio('/src/assets/sfx/click.wav');
           audio.play();
      }
@@ -21,7 +21,7 @@ const FamilyButton = ({ children }) => {
           playClickSound(); // Play sound on toggle
           setIsExpanded(!isExpanded);
      }
-    
+
      return (
           <div
                className={cn(
@@ -38,7 +38,7 @@ const FamilyButton = ({ children }) => {
                               <FamilyButtonContainer
                                    isExpanded={isExpanded}
                                    toggleExpand={toggleExpand}
-                                  
+
                               >
                                    {isExpanded ? (
                                         <motion.div

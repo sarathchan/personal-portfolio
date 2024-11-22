@@ -20,14 +20,14 @@ const images = [
           id: 2,
           src: sinssflow,
           alt: 'SINSSFLOW Project Management',
-          description: 'full-stack Project Management Application',
+          description: 'Full-stack Project Management Application',
           slug: "project-management-application-built-for-sinss"
      },
      {
           id: 3,
           src: kyte,
           alt: 'Kyte Energy',
-          description: 'design and developement of website',
+          description: 'Design and developement of website',
           slug: "kyte-energy-website-design-and-development"
      },
 ]
@@ -137,7 +137,7 @@ export default function Projects() {
                               key={activeImage.id}
                               src={activeImage.src}
                               alt={activeImage.alt}
-                              className="fixed border-2 border-green-400 p-2 object-cover pointer-events-none z-10 w-96 rounded-lg shadow-lg"
+                              className="fixed border-4 border-green-200  object-cover pointer-events-none z-10 w-96 rounded-lg shadow-lg"
                               style={{
                                    left: `${cursorPosition.x}px`,
                                    top: `${cursorPosition.y}px`,

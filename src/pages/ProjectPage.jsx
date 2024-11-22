@@ -34,6 +34,7 @@ const slideAnimation = {
   viewport: { amount: 1, once: false },
 };
 export default function index() {
+  
   const mainRef = useRef(null);
   const carouselRef = useRef(null);
   const { position } = useElementViewportPosition(mainRef);
@@ -44,6 +45,9 @@ export default function index() {
   useMotionValueEvent(scrollY, 'change', (latest) => {
     console.log('Page scroll: ', latest);
   });
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   useEffect(() => {
     window.addEventListener('scroll', () => console.log(carouselEndPosition));
   }, []);

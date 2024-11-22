@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { useParams } from 'react-router-dom'
 import { projects } from '../lib/projects'
 import { AnimatePresence, motion, useInView } from 'framer-motion'
@@ -10,7 +10,9 @@ import SEO from '../components/SEO'
 const ProjectDetails = () => {
   const { slug } = useParams()
   const project = projects.find((item) => item.slug === slug)
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const statsRef = useRef(null)
   const infoRef = useRef(null)
   const descriptionRef = useRef(null)

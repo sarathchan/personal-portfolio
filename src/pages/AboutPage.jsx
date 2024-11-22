@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 import { RevealLinks } from "../components/common/RevealLinks";
@@ -34,6 +34,9 @@ export const AboutsPage = () => {
     "Growth-Focused"
   ];
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <SEO

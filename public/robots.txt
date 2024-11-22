@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://durgeshbachhav.com/sitemap.xml
+Sitemap: https://durgeshbachhav.vercel.app/sitemap.xml

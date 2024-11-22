@@ -18,7 +18,9 @@ export default function BlogDetails() {
   const { scrollYProgress } = useScroll()
   const opacity = useTransform(scrollYProgress, [0.1, 0.2], [1, 0])
   const scale = useTransform(scrollYProgress, [0.1, 0.2], [1, 0.95])
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   useEffect(() => {
     const currentBlogIndex = blogData?.blogs?.findIndex(blog => blog.slug === slug)
     if (currentBlogIndex !== -1) {

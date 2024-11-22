@@ -41,7 +41,9 @@ export default function BlogPage() {
   const [carouselEndPosition, setCarouselEndPosition] = useState(0)
   const { scrollYProgress } = useScroll()
   const x = useTransform(scrollYProgress, position, [0, carouselEndPosition])
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   useEffect(() => {
     if (!carouselRef || !carouselRef.current) return
     const parent = carouselRef.current.parentElement
