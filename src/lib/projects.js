@@ -163,7 +163,7 @@ export const projects = [
                "Tailwind CSS for flexible styling and design"
           ],
           "techStack": ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
-          "liveLink": "https://cursify.vercel.app/",
+          "liveLink": "cursify.vercel.app",
           "image": cursify
      }
 
