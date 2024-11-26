@@ -31,7 +31,7 @@ export default function CollapsibleBanner() {
                >
                     <div className="flex w-full items-center gap-x-6 bg-green-600 px-6 py-4 sm:px-3.5 sm:before:flex-1">
                          <div className="flex items-center text-sm font-medium leading-6 text-white">
-                              <p className='font-bold text-white'>Check Out Our New Cursor Animation Library!</p>
+                              <p className='font-bold text-white'>Check Out My New Cursor Animation Library!</p>
 
                               <a
                                    href="https://cursify.vercel.app/"

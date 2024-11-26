@@ -7,7 +7,7 @@ import qualityDigital from '../assets/projects/mockups/qd1.png'
 import sp from '../assets/projects/mockups/sp.png'
 import vk from '../assets/projects/mockups/vk.png'
 import cp from '../assets/projects/mockups/cp.png'
-
+import cursify from '../assets/projects/mockups/cursify.png'
 
 export const projects = [
      {
@@ -151,6 +151,21 @@ export const projects = [
           "techStack": ["Figma", "React.js", "Framer Motion", "Shadcn UI", "Tanstack"],
           "liveLink": "climate-production.vercel.app/",
           "image": cp
+     },
+     {
+          "name": "Cursify - Cursor Animation Library",
+          "slug": "cursify-cursor-animation-library",
+          "description": "Cursify is an open-source library designed for creating stunning and interactive cursor animations. Built with React, TypeScript, Tailwind CSS, and Framer Motion, it offers seamless integration and full customization for modern web projects.",
+          "features": [
+               "Fully customizable cursor animations",
+               "Built with modern tools like React and TypeScript",
+               "Smooth motion effects powered by Framer Motion",
+               "Tailwind CSS for flexible styling and design"
+          ],
+          "techStack": ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
+          "liveLink": "https://cursify.vercel.app/",
+          "image": cursify
      }
+
 
 ]
