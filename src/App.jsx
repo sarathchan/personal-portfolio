@@ -19,7 +19,7 @@ export default function App() {
       smooth: true,
     });
 
-    return () => scroll.destroy(); 
+    return () => scroll.destroy();
   }, []);
   const [activeSection, setActiveSection] = useState('');
   console.log('')
@@ -28,8 +28,8 @@ export default function App() {
       <Navbar activeSection={activeSection} />
       <Routes>
         <Route path="/" element={<HomePage setActiveSection={setActiveSection} />} />
-        <Route path="/projects" element={<ProjectPage />} />
-        <Route path="/projects/:slug" element={<ProjectDetails />} />
+        {/* <Route path="/projects" element={<ProjectPage />} /> */}
+        {/* <Route path="/projects/:slug" element={<ProjectDetails />} /> */}
         <Route path="/blogs" element={<BlogPage />} />
         <Route path="/blogs/:slug" element={<BlogDetails />} />
         <Route path="/about" element={<AboutsPage />} />

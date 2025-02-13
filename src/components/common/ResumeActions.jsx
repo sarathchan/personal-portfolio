@@ -9,9 +9,9 @@ import FamilyButton from "../ui/FamilyButton"
 export function ResumeActions() {
      return (
           <div className="fixed bottom-4 right-4 z-[100]">
-               <FamilyButton>
+               {/* <FamilyButton>
                     <ResumeActionsToggle />
-               </FamilyButton>
+               </FamilyButton> */}
           </div>
      )
 }
@@ -60,15 +60,15 @@ export function ResumeActionsToggle() {
                     utterance.rate = 1.0  // Speed of speech
                     utterance.pitch = 1.0 // Pitch of voice
                     utterance.volume = 1.0 // Volume
-                    
+
                     // Try to set a natural-sounding voice
                     const voices = window.speechSynthesis.getVoices()
-                    const englishVoice = voices.find(voice => 
+                    const englishVoice = voices.find(voice =>
                          voice.lang.startsWith('en') && voice.name.includes('Natural')
-                    ) || voices.find(voice => 
+                    ) || voices.find(voice =>
                          voice.lang.startsWith('en')
                     )
-                    
+
                     if (englishVoice) {
                          utterance.voice = englishVoice
                     }
@@ -111,18 +111,18 @@ export function ResumeActionsToggle() {
 
      // Replace this with your resume text content
      const RESUME_TEXT = `
-          Hello, and welcome to my portfolio. My name is Durgesh, a passionate Full-Stack Developer based in Nashik, Maharashtra. You can reach me at 9607541611 or by email at durgesh.devwork@gmail.com. Feel free to explore my work further on my website, www.durgeshbacchhav.vercel.app.
+          Hello, and welcome to my portfolio. My name is Durgesh, a passionate Full-Stack Developer based in Nashik, Maharashtra. You can reach me at 9607541611 or by email at sarathchan20@gmail.com. Feel free to explore my work further on my website, www.durgeshbacchhav.vercel.app.
 
-I have over one year of experience in both front-end and back-end development, specializing in creating scalable, high-quality web applications. My expertise lies in the MERN stack—MongoDB, Express, React, and Node.js—along with Next.js for optimized front-end development. My work focuses on writing clean, maintainable code, implementing secure authentication systems, and optimizing database performance. I’m passionate about delivering user-friendly, responsive applications with a strong emphasis on UI and UX design.
+I have over three years of experience in both front-end and back-end development, specializing in creating scalable, high-quality web applications. My expertise lies in the full stack, Express, React,Nest.js and Node.js for optimized front-end development. My work focuses on writing clean, maintainable code, implementing secure authentication systems, and optimizing database performance. I’m passionate about delivering user-friendly, responsive applications with a strong emphasis on UI and UX design.
 
 I hold a Master of Computer Science from Bhonsala Military College, Nashik, where I graduated with a CGPA of 7.1 out of 10 in June 2024.
 Prior to that, I earned my Bachelor of Computer Science degree from KAANMS College, Satana, in June 2022, achieving a CGPA of 7.5 out of 10.
 
-As a Full-Stack Developer at Sinss Digital Marketing Studio since March 2024, I’ve been involved in developing e-commerce, CRM, and project management applications. I’ve successfully led the design and development of over eight websites, ensuring they are scalable and user-friendly. I’ve worked extensively with RESTful APIs, secure authentication mechanisms, and optimized database queries to enhance application performance. Collaboration with cross-functional teams has been key to meeting project deadlines and ensuring smooth deployment.
+As a Full-Stack Developer at Connected Value health Solutions since March 2024, I’ve been involved in developing e-commerce, CRM, and project management applications. I’ve successfully led the design and development of over eight websites, ensuring they are scalable and user-friendly. I’ve worked extensively with RESTful APIs, secure authentication mechanisms, and optimized database queries to enhance application performance. Collaboration with cross-functional teams has been key to meeting project deadlines and ensuring smooth deployment.
 
-Before that, I worked as a Web Developer Intern at Sinss Digital Marketing Studio from December 2023 to March 2024. During this time, I contributed to developing a dynamic website using React.js, improving its front-end performance and responsiveness. I also assisted in integrating React components with back-end services for a seamless user experience.
+Before that, I worked as a junior Web Developer Zealeye.ai from March 2022 to March 2023. During this time, I contributed to developing a dynamic website using React.js, improving its front-end performance and responsiveness. I also assisted in integrating React components with back-end services for a seamless user experience.
 
-My core skills include Full Stack Development, Database Management, Agile Methodologies such as Scrum and Kanban, and Version Control. I also excel in web development, with strong communication and collaboration skills that allow me to work effectively in diverse teams.
+My core skills include Full Stack Development, Database Management, Agile Methodologies such as Scrum , and Version Control. I also excel in web development, with strong communication and collaboration skills that allow me to work effectively in diverse teams.
 
 Thank you for taking the time to learn about me and my work. If you’d like to discuss opportunities or collaborate on a project, don’t hesitate to reach out. I look forward to connecting with you!
      `.trim()
@@ -131,7 +131,7 @@ Thank you for taking the time to learn about me and my work. If you’d like to 
           switch (activeTab) {
                case 0:
                     return (
-                         <button 
+                         <button
                               onClick={handleDownload}
                               className="flex items-center justify-center p-2 rounded-full hover:bg-neutral-600 transition-colors"
                               aria-label="Download Resume"

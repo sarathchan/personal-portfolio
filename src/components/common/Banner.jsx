@@ -29,7 +29,7 @@ export default function CollapsibleBanner() {
                     className={`absolute left-0 right-0 top-0 z-50 transition-all duration-300 ease-in-out ${isVisible ? 'translate-y-0' : '-translate-y-full'
                          }`}
                >
-                    <div className="flex w-full items-center gap-x-6 bg-green-600 px-6 py-4 sm:px-3.5 sm:before:flex-1">
+                    {/* <div className="flex w-full items-center gap-x-6 bg-green-600 px-6 py-4 sm:px-3.5 sm:before:flex-1">
                          <div className="flex items-center text-sm font-medium leading-6 text-white">
                               <p className='font-bold text-white'>Check Out My New Cursor Animation Library!</p>
 
@@ -49,7 +49,7 @@ export default function CollapsibleBanner() {
                                    <CloseIcon className="h-5 w-5 text-white" />
                               </button>
                          </div>
-                    </div>
+                    </div> */}
                </div>
                {isVisible && <div className="h-[52px]" />}
           </>

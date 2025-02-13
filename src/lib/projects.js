@@ -42,7 +42,7 @@ export const projects = [
                "Light and dark mode toggle for accessibility"
           ],
           "techStack": [
-               "Next.js",
+               "React.js",
                "Prisma",
                "PostgreSQL",
                "Tailwind CSS",
@@ -140,7 +140,7 @@ export const projects = [
      },
      {
           "projectTitle": "Climate App",
-          "description": "A real-time weather application providing detailed climate information for locations worldwide. Built with Next.js, TanStack Query, and OpenWeather API for accurate and efficient data fetching and display.",
+          "description": "A real-time weather application providing detailed climate information for locations worldwide. Built with React.js, TanStack Query, and OpenWeather API for accurate and efficient data fetching and display.",
           "features": [
                "Real-time weather updates with temperature, humidity, wind speed, and condition icons.",
                "Search functionality for finding weather details of any city.",

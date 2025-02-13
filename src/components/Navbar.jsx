@@ -15,8 +15,8 @@ import { Link } from "react-router-dom"
 
 const navLinks = [
   { id: "01", name: "Home", href: "/" },
-  { id: "02", name: "Projects", href: "/projects" },
-  { id: "03", name: "Blogs", href: "/blogs" },
+  // { id: "02", name: "Projects", href: "/projects" },
+  // { id: "03", name: "Blogs", href: "/blogs" },
   { id: "04", name: "About", href: "/about" },
   { id: "06", name: "Contact", href: "/contact" },
 ]
@@ -77,7 +77,7 @@ export default function Navbar({ activeSection }) {
             </div>
           </div>
           <div className="flex items-center">
-            <Link to={'https://github.com/durgeshbachhav'} >
+            <Link to={'https://github.com/sarathchan'} >
               <Button variant="ghost" size="icon" className="mr-2 bg-green-400">
                 <Github className="h-5 w-5" />
               </Button>

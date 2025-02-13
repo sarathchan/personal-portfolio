@@ -8,7 +8,7 @@ const HomePage = ({ setActiveSection }) => {
   return (
     <div>
       <SEO
-        title="Durgesh Bachhav - Full Stack Developer"
+        title="Sarath chandran Elango - Full Stack Developer"
         description="Welcome to my portfolio website. I'm a Full Stack Developer specializing in modern web technologies."
         path="/"
       />

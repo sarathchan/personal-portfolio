@@ -7,20 +7,20 @@ import reactIcon from '../../assets/skills/react.svg'
 
 const experiences = [
   {
-    title: "Full Stack Developer",
-    company: "Sinss Digital Marketing Studio",
-    description: "Currently working as a full-stack developer at Sinss Digital Marketing Studio since March 2023. Developed e-commerce, CRM, and project management applications using the MERN stack, Next.js, PostgreSQL, and MySQL. Designed and developed over 8 websites as the sole developer.",
+    title: "Senior Full Stack Developer",
+    company: "Connected Value health Solutions",
+    description: "Currently working as a full-stack developer at Connected Value health Solutions since March 2023. Developed e-commerce, CRM, and project management applications using the MERN stack, React.js, PostgreSQL, and MySQL. Designed and developed over 8 websites as the sole developer.",
     icon: starIcon,
-    technologies: ["MERN", "PostgreSQL", "MySQL"],
+    technologies: ["Fullstack", "PostgreSQL", "MySQL", "AWS", "AI"],
     duration: "March 2023 - Present"
   },
   {
-    title: "React Developer Intern",
-    company: "Sinss Digital Marketing Studio",
-    description: "Worked as a React.js developer intern at Sinss Digital Marketing Studio for 3 months from December 2023 to March 2024. Contributed to the development of a website built with React.js.",
+    title: "Junior fullstack developer",
+    company: "Zealeye.ai",
+    description: "Worked as a React.js developer intern at Zealeye.ai for 1year from March 2022 to March 2023. Contributed to the development of a website built with React.js.",
     icon: reactIcon,
-    technologies: ["React.js"],
-    duration: "December 2023 - March 2024"
+    technologies: ["React.js", "Nest.js", "Mongo DB"],
+    duration: "March 2022 - March 2023"
   }
 ]
 

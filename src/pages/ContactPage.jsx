@@ -39,7 +39,7 @@ export const ContactPage = () => {
             <h3 className="text-6xl max-w-xl mx-auto text-center font-bold my-4 text-[#333]">Tell me about your next project</h3>
             <div className="flex justify-center space-x-4">
               <Link
-                to="mailto:dbdev.work@gmail.com"
+                to="mailto:sarathchan20@gmail.com"
                 className={twMerge(
                   "bg-[#333] flex gap-2 text-white px-6 py-3 rounded-full hover:bg-[#4d4d4d] font-semibold transition-colors",
                   "lenis-link"
@@ -48,7 +48,7 @@ export const ContactPage = () => {
                 <Mail />Email Me
               </Link>
               <Link
-                to="https://api.whatsapp.com/send?phone=9607541611&text=Hello%20there!"
+                to="https://api.whatsapp.com/send?phone=6369545178&text=Hello%20there!"
                 className={twMerge(
                   "bg-[#25d366] text-white px-6 py-3 rounded-full hover:bg-[#34c95b] font-semibold transition-colors",
                   "lenis-link"
